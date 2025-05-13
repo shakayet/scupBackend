@@ -9,6 +9,12 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+//routes imports
+const bookRoutes = require('./Routes/books');
+
+//routes
+app.use('/api/books', bookRoutes);
+app.use('/api/books/:id', bookRoutes);
 
 
 
